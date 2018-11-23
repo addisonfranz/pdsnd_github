@@ -19,16 +19,16 @@ def get_filters():
         city = input("Would you like to see data for Chicago, New York City, or Washington? ")
         city = city.title()
         if city == 'Chicago':
-           print("You entered {}".format(city))
-           break
+            print("You entered {}".format(city))
+            break
         elif city == 'New York City':
-           print("You entered {}".format(city))
-           break
+            print("You entered {}".format(city))
+            break
         elif city == 'Washington':
-           print("You entered {}".format(city))
-           break
+            print("You entered {}".format(city))
+            break
         else:
-           print("That is not a valid input.")
+            print("That is not a valid input.")
     # getting user input on the data filter they would like to apply (month, day, both, or none)
     while True:
         filter_q = input("Would you like to filter by month, day, both, or none? ")
