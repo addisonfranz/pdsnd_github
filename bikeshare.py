@@ -27,7 +27,7 @@ def get_filters():
            print("You entered {}".format(city))
            break
         else:
-           print("Not a valid input.")
+           print("That is not a valid input.")
     # getting user input on the data filter they would like to apply (month, day, both, or none)
     while True:
         filter_q = input("Would you like to filter by month, day, both, or none? ")
@@ -54,7 +54,7 @@ def get_filters():
                 print('You have filtered by {}. There is no day filter.'.format(month))
                 break
             else:
-                print('Not a valid input.')
+                print('Not a valid month input.')
     elif filter_q == 'day':
         while True:
             month = 'all'
@@ -64,7 +64,7 @@ def get_filters():
                 print('You have filtered by {}. There is no month filter.'.format(day))
                 break
             else:
-                print('Not a valid input.')
+                print('Not a valid day input.')
     elif filter_q == 'both':
         while True:
             month = input("What month would you like to filter by? January, February, March, April, May, June? ")
