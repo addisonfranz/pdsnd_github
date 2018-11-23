@@ -11,4 +11,4 @@ This project explores bikeshare data for three US cities, Washington, New York C
 The project pulls from three CSV files that have historical bikeshare data for each of the three cities.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+The code is primarily based upon the course content from Udacity, but includes inspiration from a number of places to include python's documentation, stackoverflow, and pandas documentation.
