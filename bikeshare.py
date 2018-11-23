@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import calendar as cal
 
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -15,22 +16,22 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # getting user input for city (Chicago, New York City, Washington)
     while True:
-        city = str(input("Would you like to see data for Chicago, New York City, or Washington? "))
+        city = input("Would you like to see data for Chicago, New York City, or Washington? ")
         city = city.title()
         if city == 'Chicago':
-           print("You entered {}".format(city))
-           break
+            print("You entered {}".format(city))
+            break
         elif city == 'New York City':
-           print("You entered {}".format(city))
-           break
+            print("You entered {}".format(city))
+            break
         elif city == 'Washington':
-           print("You entered {}".format(city))
-           break
+            print("You entered {}".format(city))
+            break
         else:
-           print("Not a valid input.")
+            print("That is not a valid input.")
     # getting user input on the data filter they would like to apply (month, day, both, or none)
     while True:
-        filter_q = str(input("Would you like to filter by month, day, both, or none? "))
+        filter_q = input("Would you like to filter by month, day, both, or none? ")
         filter_q = filter_q.lower()
         if filter_q == 'month':
             break
@@ -54,7 +55,7 @@ def get_filters():
                 print('You have filtered by {}. There is no day filter.'.format(month))
                 break
             else:
-                print('Not a valid input.')
+                print('Not a valid month input.')
     elif filter_q == 'day':
         while True:
             month = 'all'
@@ -64,7 +65,7 @@ def get_filters():
                 print('You have filtered by {}. There is no month filter.'.format(day))
                 break
             else:
-                print('Not a valid input.')
+                print('Not a valid day input.')
     elif filter_q == 'both':
         while True:
             month = input("What month would you like to filter by? January, February, March, April, May, June? ")
@@ -83,6 +84,7 @@ def get_filters():
 
     print('-'*40)
     return city, month, day
+
 
 def load_data(city, month, day):
     """
@@ -123,6 +125,7 @@ def load_data(city, month, day):
         df = df[df['day'] == day.title()]
     df['hour'] = df['Start Time'].dt.hour
     return df
+
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -219,6 +222,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+
 def raw_data(df):
     """Gives the used the option to display raw data."""
     # asking for user input
@@ -240,6 +244,7 @@ def raw_data(df):
             print('That is not a valid entry')
         raw_data(df)
         break
+
 
 def main():
     while True:
