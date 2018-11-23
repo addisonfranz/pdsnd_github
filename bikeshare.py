@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import calendar as cal
 
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -84,6 +85,7 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
+
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -123,6 +125,7 @@ def load_data(city, month, day):
         df = df[df['day'] == day.title()]
     df['hour'] = df['Start Time'].dt.hour
     return df
+
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -219,6 +222,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+
 def raw_data(df):
     """Gives the used the option to display raw data."""
     # asking for user input
@@ -240,6 +244,7 @@ def raw_data(df):
             print('That is not a valid entry')
         raw_data(df)
         break
+
 
 def main():
     while True:
